@@ -57,6 +57,7 @@
     <Compile Include="Lib\IPortableSettingsSerializer.cs" />
     <Compile Include="Lib\PortableSettingsBase.cs" />
     <Compile Include="Lib\RectangleExtensions.cs" />
+    <Compile Include="Lib\Win32Api.cs" />
     <Compile Include="Lib\WindowsConst.cs" />
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>

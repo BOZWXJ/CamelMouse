@@ -65,29 +65,11 @@ namespace MMFrame.Windows.GlobalHook
 		/// </summary>
 		public struct StateKeyboard
 		{
-			/// <summary>
-			/// 
-			/// </summary>
 			public Stroke Stroke;
-			/// <summary>
-			/// 
-			/// </summary>
 			public Keys Key;
-			/// <summary>
-			/// 
-			/// </summary>
 			public uint ScanCode;
-			/// <summary>
-			/// 
-			/// </summary>
 			public uint Flags;
-			/// <summary>
-			/// 
-			/// </summary>
 			public uint Time;
-			/// <summary>
-			/// 
-			/// </summary>
 			public IntPtr ExtraInfo;
 		}
 
@@ -139,10 +121,29 @@ namespace MMFrame.Windows.GlobalHook
 		[StructLayout(LayoutKind.Sequential)]
 		private struct KBDLLHOOKSTRUCT
 		{
+			/// <summary>
+			/// A virtual-key code. The code must be a value in the range 1 to 254.
+			/// </summary>
 			public uint vkCode;
+			/// <summary>
+			/// A hardware scan code for the key.
+			/// </summary>
 			public uint scanCode;
+			/// <summary>
+			/// The extended-key flag, event-injected flags, context code, and transition-state flag.
+			/// This member is specified as follows.
+			/// An application can use the following values to test the keystroke flags.
+			/// Testing LLKHF_INJECTED (bit 4) will tell you whether the event was injected.
+			/// If it was, then testing LLKHF_LOWER_IL_INJECTED (bit 1) will tell you whether or not the event was injected from a process running at lower integrity level.
+			/// </summary>
 			public uint flags;
+			/// <summary>
+			/// The time stamp for this message, equivalent to what GetMessageTime would return for this message.
+			/// </summary>
 			public uint time;
+			/// <summary>
+			/// Additional information associated with the message.
+			/// </summary>
 			public IntPtr dwExtraInfo;
 		}
 

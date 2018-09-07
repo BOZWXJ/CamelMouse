@@ -4,10 +4,14 @@ using System.Linq;
 using System.Runtime.Serialization;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 using Tomochan154.Configuration;
 
 namespace CamelMouse.Config
 {
+	[Flags]
+	public enum Modifiers { None, LShift = 0x1, RShift = 0x2, Shift = LShift | RShift, LControl = 0x4, RControl = 0x8, Control = LControl | RControl }
+
 	[PortableSettingsPath(DirectoryName = @".\conf\", FileName = "Sample.conf")]
 	[DataContract]
 	public class AppSettings : PortableSettingsBase<AppSettings>
@@ -21,15 +25,18 @@ namespace CamelMouse.Config
 
 		protected override void OnLoaded(EventArgs args)
 		{
-			WarpLeft = false;
-			WarpRight = false;
-			WarpUp = false;
-			WarpDown = false;
+			WarpLeft = true;
+			WarpRight = true;
+			WarpUp = true;
+			WarpDown = true;
 			Margin = 5;
 			Hold = false;
 			HoldCount = 20;
 			CornerDisable = true;
 			CornerSize = 20;
+			HotKey = Keys.None;
+			MoveToCenterKey = Keys.Q;
+			MoveToCenterKeyModifiers = Modifiers.Control;
 			base.OnLoaded(args);
 		}
 
@@ -119,5 +126,38 @@ namespace CamelMouse.Config
 			get { return Get(a => a.CornerSize); }
 			set { Set(a => a.CornerSize, value); }
 		}
+
+		/// <summary>
+		/// 押している時のみ移動
+		/// </summary>
+		[DataMember]
+		public Keys HotKey
+		{
+			get { return Get(a => a.HotKey); }
+			set { Set(a => a.HotKey, value); }
+		}
+
+		/// <summary>
+		/// 中央に移動
+		/// </summary>
+		[DataMember]
+		public Keys MoveToCenterKey
+		{
+			get { return Get(a => a.MoveToCenterKey); }
+			set { Set(a => a.MoveToCenterKey, value); }
+		}
+		public Modifiers MoveToCenterKeyModifiers
+		{
+			get { return Get(a => a.MoveToCenterKeyModifiers); }
+			set { Set(a => a.MoveToCenterKeyModifiers, value); }
+		}
+
+		// 選択して移動
+
+		// 場所を表示
+
+		// 終了
+
+
 	}
 }
