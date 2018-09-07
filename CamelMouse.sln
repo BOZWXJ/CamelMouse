@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2026
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CamelMouse", "CamelMouse\CamelMouse.csproj", "{F600E5A0-7346-44C3-836E-45CE3C60121E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CamelMouseTests", "CamelMouseTests\CamelMouseTests.csproj", "{7F622BC5-286D-4BDB-96C4-B32EAD95F59F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F600E5A0-7346-44C3-836E-45CE3C60121E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F600E5A0-7346-44C3-836E-45CE3C60121E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F600E5A0-7346-44C3-836E-45CE3C60121E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F600E5A0-7346-44C3-836E-45CE3C60121E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7F622BC5-286D-4BDB-96C4-B32EAD95F59F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7F622BC5-286D-4BDB-96C4-B32EAD95F59F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7F622BC5-286D-4BDB-96C4-B32EAD95F59F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7F622BC5-286D-4BDB-96C4-B32EAD95F59F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {835EF172-3127-4F16-BC4B-7EB487E6A87A}
+	EndGlobalSection
+EndGlobal
