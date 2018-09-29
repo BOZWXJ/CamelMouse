@@ -16,6 +16,8 @@ namespace CamelMouse
 {
 	public partial class MainForm : Form
 	{
+		TargetForm target = new TargetForm();
+
 		public MainForm()
 		{
 			InitializeComponent();
@@ -449,11 +451,9 @@ namespace CamelMouse
 
 		}
 
-
 		private void button1_Click(object sender, EventArgs e)
 		{
-
-
+			target.Show();
 		}
 	}
 }

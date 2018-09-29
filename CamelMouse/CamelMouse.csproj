@@ -58,7 +58,6 @@
     <Compile Include="Lib\PortableSettingsBase.cs" />
     <Compile Include="Lib\RectangleExtensions.cs" />
     <Compile Include="Lib\Win32Api.cs" />
-    <Compile Include="Lib\WindowsConst.cs" />
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -106,6 +105,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="image\Target.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="image\Target.svg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
